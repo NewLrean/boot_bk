@@ -90,7 +90,6 @@ public class ShiroConfig {
         return shiroFilterFactoryBean;
     }
 
-
     @Bean
     public SecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();

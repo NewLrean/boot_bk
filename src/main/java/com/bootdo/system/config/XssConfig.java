@@ -15,6 +15,7 @@ public class XssConfig{
 	/**
 	 * xss过滤拦截器
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Bean
 	public FilterRegistrationBean xssFilterRegistrationBean() {
 		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();

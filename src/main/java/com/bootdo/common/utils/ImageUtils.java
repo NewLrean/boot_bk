@@ -1,17 +1,20 @@
 package com.bootdo.common.utils;
 
-import org.springframework.web.multipart.MultipartFile;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReadParam;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Iterator;
+
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author gaoyuzhe
@@ -28,7 +31,8 @@ public class ImageUtils {
      * @throws IOException
      * @date
      */
-    public static BufferedImage cutImage(MultipartFile file, int x, int y, int w, int h,String prefix) {
+    @SuppressWarnings("rawtypes")
+	public static BufferedImage cutImage(MultipartFile file, int x, int y, int w, int h,String prefix) {
 
         Iterator iterator = ImageIO.getImageReadersByFormatName(prefix);
         try {

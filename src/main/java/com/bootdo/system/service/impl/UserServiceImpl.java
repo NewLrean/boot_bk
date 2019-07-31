@@ -242,7 +242,7 @@ public class UserServiceImpl implements UserService {
             BufferedImage cutImage = ImageUtils.cutImage(file, x, y, w, h, prefix);
             BufferedImage rotateImage = ImageUtils.rotateImage(cutImage, r);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
-            boolean flag = ImageIO.write(rotateImage, prefix, out);
+            ImageIO.write(rotateImage, prefix, out);
             //转换后存入数据库
             byte[] b = out.toByteArray();
             FileUtil.uploadFile(b, bootdoConfig.getUploadPath(), fileName);

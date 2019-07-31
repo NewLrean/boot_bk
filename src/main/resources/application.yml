@@ -24,8 +24,9 @@ spring:
   devtools:
     restart:
       enabled: false
+      #采用自定义缓存
   cache:
-    type: ehcache
+    type: redis
     ehcache:
       config: classpath:config/ehcache.xml
 mybatis:
