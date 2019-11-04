@@ -16,17 +16,17 @@ spring:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
   profiles: 
-    active: dev
+    active: pro
   servlet:
     multipart:
       max-file-size: 30Mb
       max-request-size: 30Mb
   devtools:
     restart:
-      enabled: false
+      enabled: true
       #采用自定义缓存
   cache:
-    type: redis
+    type: ehcache
     ehcache:
       config: classpath:config/ehcache.xml
 mybatis:
